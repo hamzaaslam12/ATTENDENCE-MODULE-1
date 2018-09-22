@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <!-- MDL DESIGNING -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <!-- OUR STYLEING LINK -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <form action="" id="logInBtn">
+        <!-- the admin form who will check --> 
+        <h1>SIGN IN</h1>
+        
+        <div class="tyu mdl-textfield mdl-js-textfield">
+                <input class="inputs mdl-textfield__input" type="text" name="admin" id="adminName">
+                <label class="mdl-textfield__label" for="sample1">USERNAME...</label>
+              </div>
+
+              <div class="tyu inputs mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="password" name="pass" id="password">
+                    <label class="mdl-textfield__label" for="sample1">PASSWORD...</label>
+                  </div>
+                <br>
+        <button onClick="logIn()" class="mdl-button mdl-js-button mdl-button--accent">LOG IN</button>
+    </form>
+
+    <div id="abc">            
+    <table id="attendence">
+        
+        <!-- attendence will be record -->
+        <thead id="tHead">
+            <tr id="tHeader">
+                <th>Roll#</th>
+                <th>NAME</th>
+                <th>FATHER NAME</th>
+                <!-- <th>ATTENDENCE</th> -->
+            </tr>
+            
+        </thead>
+        
+        <tBody id="tBody">
+            
+        </tBody>
+        
+        <!-- <input type="text" id="uName" placeholder="STUDENT NAME..."> -->
+        <button onClick="addStudent()" class="mdl-button mdl-js-button mdl-button--accent">ADD</button>
+
+        <button onClick="newAttendence();" class="mdl-button mdl-js-button mdl-button--accent">NEW ATTENDENCE</button>
+
+        <!-- <button onClick="personalDetail();" class="mdl-button mdl-js-button mdl-button--accent">STUDENT DETAILS</button> -->
+              
+        <button onClick="logOut()" class="mdl-button mdl-js-button mdl-button--accent">LOG OUT</button>
+              
+    </table>
+</div>
+    
+    <!-- student personal details form && REGISTER FORM -->
+    
+    <form action="" id="register">
+        
+        <div class="imgcontainer">
+                <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+              </div> <br>
+        
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="number" id="rollNum">
+                    <label class="mdl-textfield__label" for="rollNum">SCHOOL WILL PROVIDE</label>
+                </div>
+                <br>    
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label tooltip">
+                    <input class="mdl-textfield__input" type="text" id="name">
+                    <label class="mdl-textfield__label" for="name">First Name...
+                </label>
+                </div>
+                <br>
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="FName">
+                    <label class="mdl-textfield__label" for="FName">Second Name...</label>
+                </div>
+                <br>
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="number" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Age...</label>
+                </div>
+                <br>
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3">Class/Sec...</label>
+                </div>
+                <br>
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="address" id="sample4">
+                    <label class="mdl-textfield__label" for="sample4">Address...</label>
+                </div>
+                <br>
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="number" id="sample5">
+                    <label class="mdl-textfield__label" for="sample5">Mobile...</label>
+                </div>
+                <br>
+                
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--primary" 
+                onClick="registerUser()">
+                REGISTER
+            </button>
+
+        </form>
+        
+</body> 
+
+<script src="index.js"></script>
+
+</html>
+
+<!-- THINGS TO BE COMPLETE:
+=> logout function
+=> styling
+=> show new Date
+=> index.js line 23, 67, 87
+=>  -->

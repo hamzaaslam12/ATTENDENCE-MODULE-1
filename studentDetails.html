@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!-- MDL DESIGNING -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- OUR STYLEING LINK -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    
+    <!-- Colored FAB button with ripple -->
+<button onClick="history.back()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+    <i class="material-icons">&#8810</i>
+  </button>
+
+    <div class="card" id="box">
+     <i class="material-icons" id="personIcon" style="font-size:140px;color:grey">person</i>
+    </div>
+</body>
+
+<script src="index.js"></script>
+<script>
+    
+    personalDetail();  
+    function personalDetail() {
+        
+        // console.log("function process"); OK
+           
+        var gettingData = JSON.parse(localStorage.getItem("children")); 
+           console.log(gettingData[0].name);
+    
+        for(var h = 0; h <= gettingData.length; h++) {
+    
+            var div1 = document.getElementById("box").innerHTML = `
+            <div>
+            <h1>${gettingData[h].name}</h1>
+            <p>FATHER NAME ${gettingData[h].fName}</p>
+            <p>CLASS ${gettingData[h].class}</p>
+            <p>AGE ${gettingData[h].age} years</p>
+            <p>ADDRESS ${gettingData[h].address}</p>
+            <p>MOBILE ${gettingData[h].mobile}</p>        
+            </div>`
+        
+        }
+        }
+    
+    </script>
+    
+</html>
