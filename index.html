@@ -5,138 +5,326 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   
-    <!-- MDL DESIGNING -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- MDL DESIGNING -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     
-    
-    <!-- OUR STYLEING LINK -->
+        <!-- font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- OUR STYLEING LINK -->
     <link rel="stylesheet" href="index.css">
+    
 </head>
-
 <body>
+    
+<!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+mdl-layout--fixed-tabs">
 
-    <form action="" id="logInBtn">
-        <!-- the admin form who will check --> 
-        <h1>SIGN IN</h1>
-        
-        <div class="tyu mdl-textfield mdl-js-textfield">
-                <input class="inputs mdl-textfield__input" type="text" name="admin" id="adminName">
-                <label class="mdl-textfield__label" for="sample1">USERNAME...</label>
-              </div>
+<header class="mdl-layout__header">
 
-              <div class="tyu inputs mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="password" name="pass" id="password">
-                    <label class="mdl-textfield__label" for="sample1">PASSWORD...</label>
-                  </div>
-                <br>
-        <button onClick="logIn()" class="mdl-button mdl-js-button mdl-button--accent">LOG IN</button>
-    </form>
+<div class="mdl-layout__header-row">
 
-    <div id="abc">            
-    <table id="attendence">
-        
-        <!-- attendence will be record -->
-        <thead id="tHead">
-            <tr id="tHeader">
-                <th>Roll#</th>
-                <th>NAME</th>
-                <th>FATHER NAME</th>
-                <!-- <th>ATTENDENCE</th> -->
-            </tr>
-            
-        </thead>
-        
-        <tBody id="tBody">
-            
-        </tBody>
-        
-        <!-- <input type="text" id="uName" placeholder="STUDENT NAME..."> -->
-        <button onClick="addStudent()" class="mdl-button mdl-js-button mdl-button--accent">ADD</button>
-
-        <button onClick="newAttendence();" class="mdl-button mdl-js-button mdl-button--accent">NEW ATTENDENCE</button>
-
-        <!-- <button onClick="personalDetail();" class="mdl-button mdl-js-button mdl-button--accent">STUDENT DETAILS</button> -->
-              
-        <button onClick="logOut()" class="mdl-button mdl-js-button mdl-button--accent">LOG OUT</button>
-              
-    </table>
+<!-- Title -->
+<span class="mdl-layout-title">Title</span>
 </div>
-    
-    <!-- student personal details form && REGISTER FORM -->
-    
-    <form action="" id="register">
-        
-        <div class="imgcontainer">
-                <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
-              </div> <br>
-        
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="number" id="rollNum">
-                    <label class="mdl-textfield__label" for="rollNum">SCHOOL WILL PROVIDE</label>
-                </div>
-                <br>    
-                
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label tooltip">
-                    <input class="mdl-textfield__input" type="text" id="name">
-                    <label class="mdl-textfield__label" for="name">First Name...
-                </label>
-                </div>
-                <br>
-                
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="FName">
-                    <label class="mdl-textfield__label" for="FName">Second Name...</label>
-                </div>
-                <br>
-                
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="number" id="sample2">
-                    <label class="mdl-textfield__label" for="sample2">Age...</label>
-                </div>
-                <br>
-                
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
-                    <label class="mdl-textfield__label" for="sample3">Class/Sec...</label>
-                </div>
-                <br>
-                
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="address" id="sample4">
-                    <label class="mdl-textfield__label" for="sample4">Address...</label>
-                </div>
-                <br>
-                
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="number" id="sample5">
-                    <label class="mdl-textfield__label" for="sample5">Mobile...</label>
-                </div>
-                <br>
-                
-                <!-- Raised button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-button--primary" 
-                onClick="registerUser()">
-                REGISTER
-            </button>
 
-        </form>
+<!-- Tabs -->
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+<a href="#fixed-tab-1" class="mdl-layout__tab is-active">HOME</a>
+<a href="#fixed-tab-2" class="mdl-layout__tab">ATTENDENCE</a>
+<a href="#fixed-tab-3" class="mdl-layout__tab">CONTACT</a>
+<a href="#fixed-tab-4" class="mdl-layout__tab">ABOUT</a>
+
+</div>
+
+</header>
+
+<!-- MORE OPTION DIV -->
+<div class="mdl-layout__drawer"> 
+<!-- <span class="mdl-layout-title">Title</span> -->
+<img src="https://us.123rf.com/450wm/vectorgraphics2014/vectorgraphics20141501/vectorgraphics2014150100043/36228860-stock-vector-education-logo-vector-design-represents-school-emblem-concept-.jpg?ver=6" id="icon" alt="">              
+
+<h4>THANK YOU FOR CHOOSING OUR INSTITUTE  </h4>
+<a href="javascript:void(0)">SETTING</a> <br>
+<a href="javascript:void(0)">ACADEMIC</a> <br>
+<a href="javascript:void(0)">ALUMNI</a> <br>
+<a href="javascript:void(0)">MORE</a> <br>
+
+</div>
+
+<main class="mdl-layout__content">
+
+<section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+<div class="page-content"><!-- Your content goes here -->
+
+    <!-- <h1>1</h1> -->
+
+                    <!-- image slider -->
+                    <img id="0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZUz-79AwQ2Gs-a3SFAYa8VjrLKOGclNg5nDPRndTsG4ZvBffQ" class="widthHeight" alt="">
+                    <img id="1" class="widthHeight" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEhIVFRUVFhUYGBgYFRgVFhcXFRYWFhgZFxYZHSggGBolHRcV
+                                     ITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGysmICYuLy0wLSszLS0tLS0tLy8tKy8tLS0tLS0tLS0tLS0tLS0tLSstLSstLS0tLS0tLS0tLf/AABE
+                                     IAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAABAIDBQEGB//EAE0QAAIBAgMDBwYJCQcDBQEAAAECAwARBBIhBRMxBiJBUWFxkRQjMoGhsUJ
+                                     SYnKCksHR0hUzQ1OTorLC8Ackg6Oz0+EWc+JEVGPD8TT/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAMxEAAgEDAQQHCAMAAwAAAAAAAAECAxESEwQh
+                                     MVEUQVJhgaHhIiMyM3GRsfAkQsEFQ9H/2gAMAwEAAhEDEQA/AGclGSmclcyV9Jc8ewvkrmSmd3XMlFwsLZKMlM5K5kouKwtko3dM5KMlFwFd3Ru6ZyUZKdwFslc
+                                     3dNZKMlFwFd3Ru6ZyUZKLgLZKMlM5KMlFwFslGSmclGSi4C2SjJTOSjJRcBbJRkpnJRkouAtkoyUzkoyUXAW3dd3dMZK7kouAtu6N3TOSjJRcBfd0ZKZyUZKLhYW3
+                                     ddyUxu67kouAtkruSmN3XclK4WF8lGSmMldyUXHYXyUZKYyUZKLhYYyUZKZyUZKyyNLCuSjJTWSuZKeQWFslcyU1koyUZCsK5KMlM7ujd0ZBYVyUZKa3dG7oyCwru6
+                                     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" alt="">
+                    <img id="2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0vRGgXfx8VNsAgW5A278YygYNjZO6ZOJ4XBM63jRrt9UT99AL" class="widthHeight" alt="">
+                    <img id="3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8D6_mym-XwaUNrnupYO9fHYPZOoQqg9ery9VO7-UpS6NzmfPt" class="widthHeight" alt="">
+                    <img id="4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-oxrAk5fIVMNCkqbv7CayBS5VOgQMpqf7NbzVG-OyLgMZHZFXw" class="widthHeight" alt="">
+                    <img id="5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0exchm5mVzx2Kjrl1CTlN7pYF9q49DgshgzHw1VQmGrFSRf1LaA" class="widthHeight" alt="">       
+                    
+
+</div>
+</section>
+
+<section class="mdl-layout__tab-panel" id="fixed-tab-2">
+<div class="page-content"><!-- Your content goes here -->
+
+    <!-- <h1>2</h1> -->
+    
+    <div id="abc">            
+            <table id="attendence">
+                
+                <!-- attendence will be record -->
+                <thead id="tHead">
+                    <tr id="tHeader">
+                        <th>Roll#</th>
+                        <th>NAME</th>
+                        <th>FATHER NAME</th>
+                        <th>ATTENDENCE</th>
+                    </tr>
+                    
+                </thead>
+                
+                <tBody id="tBody">
+                    
+                </tBody>
+                
+                <!-- <input type="text" id="uName" placeholder="STUDENT NAME..."> -->
+                <button onClick="addStudent()" class="mdl-button mdl-js-button mdl-button--accent">ADD</button>
         
-</body> 
+                <button onClick="newAttendence();" class="mdl-button mdl-js-button mdl-button--accent">NEW ATTENDENCE</button>
+        
+                <!-- <button onClick="personalDetail();" class="mdl-button mdl-js-button mdl-button--accent">STUDENT DETAILS</button> -->
+                      
+                <button onClick="logOut()" class="mdl-button mdl-js-button mdl-button--accent">LOG OUT</button>
+                      
+            </table>
+        </div>
+            
+            <!-- student personal details form && REGISTER FORM -->
+            
+            <form action="" id="register">
+                
+                <div class="imgcontainer">
+                        <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+                      </div> <br>
+                
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="number" id="rollNum">
+                            <label class="mdl-textfield__label" for="rollNum">SCHOOL WILL PROVIDE</label>
+                        </div>
+                        <br>    
+                        
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label tooltip">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">First Name...
+                        </label>
+                        </div>
+                        <br>
+                        
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="FName">
+                            <label class="mdl-textfield__label" for="FName">Second Name...</label>
+                        </div>
+                        <br>
+                        
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="number" id="sample2">
+                            <label class="mdl-textfield__label" for="sample2">Age...</label>
+                        </div>
+                        <br>
+                        
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="sample3">
+                            <label class="mdl-textfield__label" for="sample3">Class/Sec...</label>
+                        </div>
+                        <br>
+                        
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="address" id="sample4">
+                            <label class="mdl-textfield__label" for="sample4">Address...</label>
+                        </div>
+                        <br>
+                        
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="number" id="sample5">
+                            <label class="mdl-textfield__label" for="sample5">Mobile...</label>
+                        </div>
+                        <br>
+                        
+                        <!-- Raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--primary" 
+                        onClick="registerUser()">
+                        REGISTER
+                    </button>
+        
+                </form>                    
+
+</div>
+</section>
+
+<section class="mdl-layout__tab-panel" id="fixed-tab-3">
+<div class="page-content"><!-- Your content goes here -->
+
+    <!-- <h1>3</h1> -->
+
+    <address>
+     <pre>
+                        Marine School
+                        Near PIDC Bridge,
+                        Moulvi Tammizuddin Khan Road
+                        Karachi, Pakistan.
+      </pre>       
+    </address>
+
+    <h4> <strong>Tel: 92-21–35652434 – 37</strong></h4>
+    
+<h4>Email: admin.marines@marineschools.edu.mpk</h4>
+    
+<iframe id="iFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.4967458679835!2d67.00931781416624!3d24.812680453283544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d9aa4842913%3A0xe2e377cbc8a3c41!2sMarine+Drive%2C+Block+2+Clifton%2C+Karachi%2C+Karachi+City%2C+Sindh%2C+Pakistan!5e0!3m2!1sen!2s!4v1538577234107" width="700" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
+</section>
+
+<section class="mdl-layout__tab-panel" id="fixed-tab-4">
+        <div class="page-content"><!-- Your content goes here -->
+        
+            <!-- <h1>4</h1> -->
+
+            <h4>HISTORY: </h4>
+            <p>
+                Ever since it was founded in 1959 Marine School has been striving to provide the best
+                to students in all dimensions of their growth and development. In the formative years the 
+                school established credentials in academics and sports; in fact the pioneers always believed
+                that the two facet of learning are closely interwoven, what is taught as values in classrooms
+                is demonstrated aptly in the play fields.  Together the experience leaves indelible imprints 
+                on the minds and behavior of students who carry the learning into their practical life and 
+                benefit the society.  Periodically the whole concepts involved in fostering and nurturing students 
+                was reviewed to adapt to changing trends and time.                                
+            </p>
+
+            <h4>Premises</h4>
+<p>Spread over approximately 18 acres of land, the school campus is located in the city centre
+of the sprawling metropolis. The campus comprising blocks of buildings that house classrooms, 
+staffrooms, laboratories, libraries, resource rooms, projection rooms and other accommodation 
+needed by the school. The School infrastructural resources include two swimming pools, two hockey
+fields another field for other sports, a hall and a centrally air-conditioned auditorium cum gymnasium 
+with a capacity for over 1000 seats that has been commissioned in November, 2006. Construction of another
+academic block in the Senior Section comprising 18 classrooms and offices is in progress. </p>
+
+<h4>Libraries</h4>
+<p> We have a well stocked library for both staff & students who are encouraged to read good books by well known authors. We have allotted days Library period for each class & we admire & encourage the students to sharpen their intellect & knowledge by reading. We have a full fledged Librarian to keep the library up-to-date, well maintained, and well stocked with a wide range of reading material on various subjects. Our libraries also facilitate research work for students and teacher and also support academic curriculum.
+
+Students, teachers and other staff members enjoy and spend valuable time in libraries, which host a treasure of reading materials ranging from; encyclopedias, reference books, fiction, biographies and novels, books on technical information, magazines and newsletters in both print and softcopy. Students and teachers both avail and enjoy internet facilities during school hours. Computer systems with internet facilities are also open to all its visitors.
+</p>
+
+<h4> Computer Labs</h4>
+<p>    The school emphasizes education through computers by encouraging students to include
+web based research for various class projects and assignments. </p>
+
+<p>  Two fully equipped computer labs for primary and secondary students that offer students
+ access to audio visual printing facilities. A computer connected to a ceiling mounted projector
+  is used for demonstration and instruction.</p>
+
+<p> Students have access to word processing, spreadsheets, graphics, desktop publishing,
+     programming, and many other specialized applications. Specialized software for math,
+      a word language and science class is also available. </p>
+
+    <p> All students may work independently in the lab on school related projects, or may obtain assistance from computer science teachers in selecting appropriate software for the project, and learning how to use a piece of software or equipment.
+</p>   
+<h4>Audio Visual Rooms</h4>
+<p> HPS is well equipped with Audio Visual Rooms. </p>
+
+<h4>Music Rooms</h4>      
+<p> Marine School has arranged a special room for the lectures of Music. Also various kinds of instruments
+like Flute, bass drums, Harmonium and guitar are taught to play. </p>
+
+<h4>Auditorium</h4>
+<p> Auditorium accommodate up to 200 guests. The back wall of the stage doubles as a projection 
+screen. Podium with microphone and LCD projector are standard equipment.</p>
+
+<h4>Sports Grounds</h4>
+<p> Wide play areas, lush green gardens, sports grounds provide space and opportunity for students 
+to play, practice and maintain a healthy life style. Major intra/inter school sports activities,
+competitions and events are also organized throughout the year to promote team spirit and drive for
+healthy competition. </p>
+
+<p>  The School holds Throw ball, netball, Volleyball, Hockey and Athletics Tournaments that provide
+ healthy competitions among the students of the different campuses. Our finalists often qualify
+  and participate in the national competitions. </p>
+
+<h4>Swimming Pool</h4>
+<p>HPS provides facilities of swimming pools for students. There are two separate swimming pools – one for
+ the senior and the other for the junior students. These swimming pools are equipped with latest technology
+  of filtration providing year-round facility to our swimmers. Qualified and
+ experienced gents swimming coaches supervise and train the boys in swimming sessions.
+</p>
+
+<h4>Cafeteria</h4>
+<p>  The school has a well maintained canteen cum tuck shop for junior section and a separate canteen 
+with adjoining hall for the senior section where in addition to snacks, cold drinks and the like; 
+subsidized lunch is served to the students and staff. </p>
+
+<h4>Students Clinic</h4>
+<p>  Marine School provides full-time, qualified physician and a Clinic where the children can be 
+treated in emergencies and provide basic medical aid to every student through a full time General 
+Physician, who is responsible for regular health check-ups of all students and maintenance of their
+computerized medical records. Consequently, she keeps a check on risk factors involved in the spread
+of any common infections, like Influenza, Mumps, Chicken Pox, etc. The doctor also conducts and organizes
+awareness raising workshops, on maintaining a healthy life style, for students, faculty, staff and 
+parents. </p>
+
+<h4>Gymnasium</h4>
+<p> The school has its own gym, open from 8 am. to 03:30 pm. week days.
+Students also have access to various sports activities coached by our full-time sports instructor. </p>
+
+<p>Sports are fully integrated into the curriculum at HPS and various student clubs and 
+societies also offer a range of exciting sporting opportunities, provided financial participation.</p>
+
+<h4>Science Labs</h4>
+<p> Spacious and well equipped laboratories exist for Physics, Chemistry, Biology and Computer Science.
+A science lab, clay work premises, art room and a School choir room are separately set up in the
+junior section with easy access to the senior section in the afternoon session. These labs and 
+facilities are well stocked with items required to fully cater to the Board Curriculum. These
+facilities also enable the students to get whole-some education.</p>
+
+<h4>Art Room</h4>
+<p> Our large open Art Room accommodates up to 30 students around study art table with washing facilities and 
+computer facilities also available. Purpose built Art room are hubs for students to explore and 
+heighten their aesthetic as well as creative skills through various forms of painting, drawing,
+sculpture making and other forms of art. </p>
+
+<h4>Student Transport Facility</h4>
+<p> Safe and comfortable transportation buses are provided by the School. Students are picked up and
+dropped at fixed points. We take every measure possible to ensure that the children travel to and 
+from school every day in a comfortable manner. </p>
+</p>        
+        </div>
+        </section>
+        
+</main>
+
+</div>
+
+</body>
 
 <script src="index.js"></script>
 
 </html>
-
-<!-- THINGS TO BE COMPLETE:
-=> logout function
-=> styling
-=> show new Date
-=> index.js line 23, 67, 87
-=>  -->

@@ -1,123 +1,197 @@
 body {
-      background-color: rgb(212, 245, 245);
+  background-color: rgb(212, 245, 245);
 }
 #logInBtn {
-    display: none;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+  display: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 #abc {
-    /* display: none; */
-    padding-bottom: 10px;
-    margin-left: 450px;
-    margin-top: 50px;
-    margin-right: auto;
-
+  /* display: none; */
+  padding-bottom: 10px;
+  margin-left: 450px;
+  margin-top: 50px;
+  margin-right: auto;
 }
 
 #attendence {
-    /* border: 2px inset rgb(68, 68, 233); */
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(86, 86, 177);
+  /* border: 2px inset rgb(68, 68, 233); */
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(86, 86, 177);
 }
 
 h1 {
-   color: purple;
-   text-align: center;
+  color: purple;
+  text-align: center;
 }
 
 .tyu {
-   color: purple;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 27px;
+  color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
 }
 
 #register {
-    display: none;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    width: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    color: purple;
-    font-family: 'Times New Roman', Times, serif;
+  display: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  color: purple;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .visible1 {
-    width: 100%;
-    border: 2px solid blue;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  border: 2px solid blue;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .header {
-    color: green;
-    font-size: 30px;
-    padding-left: 10px;
-    padding-top: 3px;
-
+  color: green;
+  font-size: 30px;
+  padding-left: 10px;
+  padding-top: 3px;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
 }
 
 #personIcon {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#icon {
+  width: 250px;
+  height: 200px;
+  border-radius: 100px;
 }
 
 #box {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 110px;
-    width: 600px;
-    height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110px;
+  width: 600px;
+  height: 400px;
 }
 
 /* The Close Button (x) */
 .close {
-    float: right;
-    color: rgb(10, 10, 10);
-    font-size: 35px;
-    font-weight: bold;
+  float: right;
+  color: rgb(10, 10, 10);
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: red;
-    cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 #logInBtn {
-    width: 400px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+  width: 400px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
 }
 
 .input {
-    color: blue;
+  color: blue;
 }
 
 table {
-    /* border: 2px solid black; */
-    border-collapse: collapse;
+  /* border: 2px solid black; */
+  border-collapse: collapse;
 }
 
-td, th {
-    border: 2px solid red;
+td,
+th {
+  border: 2px solid red;
 }
 
-.emptyCell{
-    empty-cells: hide;
+.emptyCell {
+  empty-cells: hide;
+}
+
+div {
+  display: inline-block;
+}
+
+.widthHeight {
+  /* width: 1000;
+    height: 800;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300; */
+
+  vertical-align: middle;
+  width: 600px;
+  height: 300px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 300px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#iFrame {
+  margin-left: 300px;
+}
+
+h4 {
+  color: rgb(240, 60, 93);
+  text-align: left;
+}
+
+pre {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(240, 60, 93);
+  text-align: left;
+  background-color: rgb(212, 245, 245);
+  border: 0px;
+}
+
+p {
+  color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+#moreOpt {
+  text-align: left;
+}
+
+#institute {
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 23px;
 }

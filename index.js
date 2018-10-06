@@ -38,15 +38,13 @@ function addStudent() {
 
     for (var i = 0; i < x.length; i++) {
         console.log(x[i])
-
-        // let _id = "rollNum" + x[i].rollNum + (i + 1);
     
         const tBody = document.getElementById("tBody").innerHTML += `
         <tr id=${"age_" + x[i].age}>
-          <td>${x[i].rollNum}<td>
-          <td onClick = check()> ${x[i].name}<td>
-          <td>${x[i].fName}<td>
-          ${x[i].attendents.map((attendents,index) => `<td id=${"rollNum" + x[i].rollNum + (index + 1)} ondblclick=change1(${"rollNum" + x[i].rollNum + (index + 1)}) onClick=change(${"rollNum" + x[i].rollNum + (index + 1)})>${attendents}<td>`)}
+          <td>${x[i].rollNum}</td>
+          <td onClick = check()> ${x[i].name}</td>
+          <td>${x[i].fName}</td>
+          ${x[i].attendents.map((attendents,index) => `<td id=${"rollNum" + x[i].rollNum + (index + 1)} ondblclick=change1(${"rollNum" + x[i].rollNum + (index + 1)}) onClick=change(${"rollNum" + x[i].rollNum + (index + 1)})>${attendents}</td>`)}
           </tr>`
     }
     
@@ -113,10 +111,10 @@ function logIn(id) {
         var month = (date.getMonth() + 1);
         var acctualDate = date1 + "/"+ month; 
        
-        // console.log(acctualDate);
         // making th cell
         var thCell = document.getElementById("tHeader").innerHTML +=`
-        <th>${acctualDate}</th>`
+        <th>${acctualDate}</th>
+        `
 
         // getting data
       var get = JSON.parse(localStorage.getItem("children"));
@@ -132,14 +130,39 @@ function logIn(id) {
         
             var tRow1 = document.getElementById( "age_" + get[q].age).innerHTML += `
         
-            <td>${get[q].rollNum}<td>
+            <td>${get[q].rollNum}</td>
         
-            <td onClick=check()>${get[q].name}<td>
+            <td onClick=check()>${get[q].name}</td>
         
-            <td>${get[q].fName}<td>
-            ${get[q].attendents.map((attendent,index) => `<td id=${"rollNum" + get[q].rollNum + (index)} ondblclick=change1(${"rollNum" + get[q].rollNum + (index)}) onClick=change(${"rollNum" + get[q].rollNum + (index)})>${attendent}<td>`)}
+            <td>${get[q].fName}</td>
+            ${get[q].attendents.map((attendent,index) => `<td id=${"rollNum" + get[q].rollNum + (index)} ondblclick=change1(${"rollNum" + get[q].rollNum + (index)}) onClick=change(${"rollNum" + get[q].rollNum + (index)})>${attendent}</td>`).join(' ')}
            `
             }
             localStorage.setItem("children", JSON.stringify(get)); //SAVE TO LOCAL STORAGE
         
 }
+
+
+// Image slider code
+
+var totalImg = 6;
+var currentImg = 0;
+
+slider()
+function slider() {
+    if(totalImg === currentImg) {
+        currentImg = 0;
+    }
+
+    for(let i = 0; i <totalImg; i++) {
+        if(i === currentImg)  document.getElementById(i).className = "show";
+    
+        else document.getElementById(i).className = "hide";
+    }
+    currentImg++;
+}
+
+setInterval(function(){
+    slider();
+}, 2000)
+
